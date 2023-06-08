@@ -11,8 +11,7 @@ section.Home {
     /* background: linear-gradient( 135deg ,  rgb(0, 0, 255 , 0.1), rgba(255, 59, 163, 0.201)  ); */
     background-image: linear-gradient(135deg , rgba(34, 3, 124, 0.2)    , rgba(3, 255, 242, 0.1) ) ;
     width: 100% ;
-    height: 800px;
-    
+    height: 800px;    
 }
 div.text {
     position: absolute;
@@ -68,7 +67,7 @@ div.circle-image:hover {
     width: 515px;
     height: 515px;
     background-image: linear-gradient(rgba(5, 198, 201, 0.2) , rgba(83, 4, 194, 0.2) ),url("animated.jpeg");
-    box-shadow: 0 0 70px 65px   rgba(23, 99, 161, 0.543);
+    box-shadow: 0 0 70px 65px   rgba(23, 99, 161, 0.843);
 }
 section.Home div.buttons span {
     margin: 8px;
@@ -85,6 +84,8 @@ span.free::before {
 }
 
 
+
+
 /* Home section styling over */
 
 
@@ -98,10 +99,10 @@ nav span {
     position: absolute;
     margin: 15px 150px;
     font-size: large;
-    margin: 15px 15 0px;
+    /* margin: 15px 15 0px; */
 }
 nav div.list {
-    float: right;
+    float:right;
 }
 nav ul {
     list-style-type: none;
@@ -124,12 +125,14 @@ nav ul li:hover {
     cursor: pointer;
 }
 nav {
+    top: 0;
     position: fixed;
     width: 100%;
     height: 80px;
     background: linear-gradient( 135deg , rgba(255,255,255 , 0.3) , rgba(255,255,255,0.1) );
-    /* filter: blur(20px); */
+    backdrop-filter: blur(20px);
     border-bottom: 1px solid rgba(37, 37, 37, 0.2);
+    z-index: 5;
 }
 
 /* Navigation styling over */
@@ -145,20 +148,24 @@ nav {
 /* About Section Styling start */
 
 section.About {
+    /* position: absolute; */
     width: 100%;
     height: 1000px;
     background-color: black;
 }
 
-section.About span.heading {
+section.About div.content span.heading {
     font-size: 4.5em;
-    position: absolute;
-    margin :90px 0 0 350px ; 
+    position: relative;
+    top: 90px;
+    left: 350px ;
+    /* margin :90px 0 0 350px ;  */
 }
 
 section.About div.myimage {
-    position: absolute;
-    margin-top: 200px;
+    float: right;
+    position: relative;
+    top: 200px;
     right: 8% ;
     width: 450px;
     height: 600px;
@@ -168,14 +175,12 @@ section.About div.myimage {
     /* border: 10px solid rgb(255, 255, 255); */
     border-radius: 110px;
 }
-section.About div.content {
-    width: 800px;
+section.About div.content p  {
+    max-width: 800px;
     /* height: 1000px; */
-    position: absolute;
-    margin-top: 250px;
+    position: relative ;
+    top: 250px;
     left: 6%;
-}
-section.About div.content p {
     font-size: 1.45em;
     word-spacing: 5px;
     text-align: justify;
@@ -194,9 +199,108 @@ section.About div.content p {
 /* Skills Section styling start */
 
 section.skills {
+
     width: 100%;
     height: 1000px;
+    background-color: rgb(0, 85, 85);
+
 }
 
 
 /* Skills Section styling over */
+
+
+
+
+
+
+
+/* media queries */
+
+@media all and ( max-width: 1720px) {
+    section.Home div.text{
+        top: 0px;
+        left: 0;
+        /* align-items: center; */
+        position:static;
+        /* margin: 0 auto; */
+    }
+    section.Home div.circle-image {
+        margin: 125px auto ;
+    }
+    section.Home {
+        height: 1050px;
+    }
+    section.Home span.work::before {
+        /* display: none; */
+        
+        content: "";
+        position: absolute;
+        height: 2.2%;
+        width: 7%;
+        padding: 10px ;
+        background: linear-gradient(to right , cyan , purple , pink , yellow);
+        z-index: -1;
+        filter: blur(10px);
+        
+    }
+    section.Home span.free::before {
+        /* display: none; */
+        
+        content: "";
+        position: absolute;
+        height: 2.2%;
+        width: 5%;
+        padding: 10px ;
+        background: linear-gradient(to right , cyan , purple , pink , yellow);
+        z-index: -1;
+        filter: blur(10px);
+        
+    }
+    section.About {
+        height: 2000px;
+    }
+    section.About div.content div.heading {
+        text-align: center;
+    }
+   
+    section.About div.content span.heading {
+        left: 0;
+        right: 0;
+        font-size: 4em;
+    }
+    section.About div.myimage{
+        right: 0 ;
+        left: 0;
+        margin: 0px auto;
+        float: none ;
+    }
+    section.About div.content p {
+        font-size: 1.2em ;
+        border: 6px solid coral;
+        padding: 10px;
+        max-width: 1720px;
+        margin: 0 70px;
+        left: 0;
+        background-color: rgb(21, 20, 20);
+        word-spacing: -1.5px;
+    }
+    nav div.list {
+        float: none;
+        margin-top: 15px;
+    
+    }
+    nav div.list ul li {
+        display: inline-block;
+        float: none;
+    }
+    nav div.list ul{
+        text-align: center;
+        margin: 0;
+    }   
+    
+
+
+
+} 
+
