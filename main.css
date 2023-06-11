@@ -58,10 +58,10 @@ div.circle-image {
     border-radius: 50%;
     /* box-shadow: 0 0 70px 45px   rgb(91, 32, 158); */
     /* box-shadow: 0 0 70px 45px   rgba(145, 33, 205, 0.656); */
-    transition: all 0.4s;
+    transition: all 0.9s;
     box-shadow: 5px 5px 50px rgb(0, 0, 0), 0 0 50px 30px rgba(44, 5, 161, 0.3);
 }
-div.circle-image:hover {
+section.Home:hover div.circle-image {
     margin-top: 128px;
     margin-left: 22.87%;
     width: 515px;
@@ -132,7 +132,6 @@ nav {
     background: linear-gradient( 135deg , rgba(255,255,255 , 0.3) , rgba(255,255,255,0.1) );
     backdrop-filter: blur(20px);
     border-bottom: 1px solid rgba(37, 37, 37, 0.2);
-    z-index: 5;
 }
 
 /* Navigation styling over */
@@ -174,10 +173,19 @@ section.About div.myimage {
     background-position: -230px;
     /* border: 10px solid rgb(255, 255, 255); */
     border-radius: 110px;
+    transition: all 0.5s ease-in;
 }
+
+section.About div.content div.myimage:hover {
+    transform: rotate(5deg);
+}
+
+
 section.About div.content p  {
+    background: url(ok-removebg-preview.png);
+    background-size: 120%;
     max-width: 800px;
-    /* height: 1000px; */
+    height: 1000px;
     position: relative ;
     top: 250px;
     left: 6%;
@@ -185,6 +193,9 @@ section.About div.content p  {
     word-spacing: 5px;
     text-align: justify;
     font-family:sans-serif;
+    background-size: 95%;
+    background-repeat: no-repeat;
+    background-position: 50% -140px ;
 }
 
 
@@ -211,6 +222,16 @@ section.skills {
 
 
 
+/* Contact section styling starts */
+
+section.contact {
+    width: 100%;
+    height: 1000px;
+    background-color: aquamarine;
+}
+
+
+/* Contact section styling over */
 
 
 
@@ -303,4 +324,9 @@ section.skills {
 
 
 } 
+
+
+
+
+
 
