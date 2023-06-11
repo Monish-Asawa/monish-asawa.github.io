@@ -11,13 +11,17 @@ section.Home {
     /* background: linear-gradient( 135deg ,  rgb(0, 0, 255 , 0.1), rgba(255, 59, 163, 0.201)  ); */
     background-image: linear-gradient(135deg , rgba(34, 3, 124, 0.2)    , rgba(3, 255, 242, 0.1) ) ;
     width: 100% ;
-    height: 800px;    
+    height: 1000px;    
 }
 div.text {
+    /* display: none; */
     position: absolute;
-    top: 36%;
-    right: 9%;
+    /* top: 36%; */
+    top: 43%;
+    /* right: 9%; */
+    right: 13%;
     text-align: center;
+    /* transition: display 0.8s 1s; */
 }
 span#monish {
     font-size: 4.5rem;
@@ -27,7 +31,7 @@ span#monish1 {
 }
 span.work {
     padding: 10px;
-    background-color: black;
+    background-color: rgba(0, 0, 0, 0.537);
     border: 5px solid rgb(142, 67, 255);
 }
 span.work::before {
@@ -46,8 +50,11 @@ span.work:hover {
 }
 
 div.circle-image {
-    margin-left: 23%;
-    margin-top: 130px;
+    margin-left: 20%;
+    /* position: relative; */
+    /* margin-left: 37%; */
+    /* margin-top: 130px; */
+    margin-top: 175px;
     width: 500px;
     height: 500px;
     background-image: linear-gradient(rgba(5, 198, 201, 0.8) , rgba(83, 4, 194, 0.8) ),
@@ -58,17 +65,24 @@ div.circle-image {
     border-radius: 50%;
     /* box-shadow: 0 0 70px 45px   rgb(91, 32, 158); */
     /* box-shadow: 0 0 70px 45px   rgba(145, 33, 205, 0.656); */
-    transition: all 0.9s;
+    transition: all 1s;
     box-shadow: 5px 5px 50px rgb(0, 0, 0), 0 0 50px 30px rgba(44, 5, 161, 0.3);
 }
 section.Home:hover div.circle-image {
-    margin-top: 128px;
-    margin-left: 22.87%;
+    /* margin-top: 128px; */
+    margin-top: 173px;
+    margin-left: 19.87%;
+    /* margin-left: 20.87%; */
     width: 515px;
     height: 515px;
     background-image: linear-gradient(rgba(5, 198, 201, 0.2) , rgba(83, 4, 194, 0.2) ),url("animated.jpeg");
-    box-shadow: 0 0 70px 65px   rgba(23, 99, 161, 0.843);
+    box-shadow: 0 0 70px 63px   rgba(23, 99, 161, 0.843);
 }
+
+/* section.Home:hover div.text {
+    display: block;
+} */
+
 section.Home div.buttons span {
     margin: 8px;
 }
@@ -95,18 +109,15 @@ span.free::before {
 
 /* Navigation styling */
 
-nav span {
-    position: absolute;
-    margin: 15px 150px;
-    font-size: large;
-    /* margin: 15px 15 0px; */
-}
+
 nav div.list {
     float:right;
 }
 nav ul {
     list-style-type: none;
-    margin-right: 145px;
+    margin-top: 23px;
+    margin-right: 215px;
+    /* margin-right: 145px; */
 }
 nav ul li {
     margin: 0 40px 0 0px ; 
@@ -156,15 +167,15 @@ section.About {
 section.About div.content span.heading {
     font-size: 4.5em;
     position: relative;
-    top: 90px;
-    left: 350px ;
+    top: 150px;
+    left: 450px ;
     /* margin :90px 0 0 350px ;  */
 }
 
 section.About div.myimage {
     float: right;
     position: relative;
-    top: 200px;
+    top: 170px;
     right: 8% ;
     width: 450px;
     height: 600px;
@@ -177,7 +188,7 @@ section.About div.myimage {
 }
 
 section.About div.content div.myimage:hover {
-    transform: rotate(5deg);
+    transform: rotate(1deg);
 }
 
 
@@ -187,7 +198,7 @@ section.About div.content p  {
     max-width: 800px;
     height: 1000px;
     position: relative ;
-    top: 250px;
+    top: 220px;
     left: 6%;
     font-size: 1.45em;
     word-spacing: 5px;
@@ -196,7 +207,9 @@ section.About div.content p  {
     background-size: 95%;
     background-repeat: no-repeat;
     background-position: 50% -140px ;
+    margin-left: 100px;
 }
+
 
 
 /* ABout section styling over */
@@ -222,14 +235,29 @@ section.skills {
 
 
 
-/* Contact section styling starts */
-
-section.contact {
-    width: 100%;
-    height: 1000px;
-    background-color: aquamarine;
+/* Nav vertical Contact styling starts */
+nav.content {
+    left: 0%;
+    backdrop-filter: blur(70px);
+    width: 86px;
+    height: 100%;
+    position: fixed;
+    /* border-right: 1px solid rgba(255, 255, 255, 0.085); */
 }
-
+nav.content div.content {
+    margin-top: 280px;
+}
+nav.content div.content svg {
+    /* margin: 0%; */
+    width: 45px;
+    height: 45px;
+}
+nav.content div.content a {
+    /* margin: 0%; */
+    padding: 50px 0px 0 23px ;
+    width: 100%;
+    float: left; 
+}
 
 /* Contact section styling over */
 
