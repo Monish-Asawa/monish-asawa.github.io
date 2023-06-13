@@ -77,6 +77,8 @@ section.Home:hover div.circle-image {
     height: 515px;
     background-image: linear-gradient(rgba(5, 198, 201, 0.2) , rgba(83, 4, 194, 0.2) ),url("animated.jpeg");
     box-shadow: 0 0 70px 63px   rgba(23, 99, 161, 0.843);
+    box-shadow: 0 0 100px 50px   rgba(23, 99, 161, 0.843);
+
 }
 
 /* section.Home:hover div.text {
@@ -97,9 +99,6 @@ span.free::before {
     filter: blur(10px);
 }
 
-
-
-
 /* Home section styling over */
 
 
@@ -112,11 +111,12 @@ span.free::before {
 
 nav div.list {
     float:right;
+    /* z-index: 10; */
 }
 nav ul {
     list-style-type: none;
     margin-top: 23px;
-    margin-right: 215px;
+    margin-right: 255px;
     /* margin-right: 145px; */
 }
 nav ul li {
@@ -129,6 +129,8 @@ nav ul li a {
     text-decoration: none;
     color:whitesmoke  ;
     font-size:large ;    
+    font-family: sans-serif;
+    letter-spacing: 2px;
 }
 nav ul li:hover {
     background-color: rgba(0, 255, 255, 0);
@@ -136,6 +138,7 @@ nav ul li:hover {
     cursor: pointer;
 }
 nav {
+    z-index: 1;
     top: 0;
     position: fixed;
     width: 100%;
@@ -162,6 +165,7 @@ section.About {
     width: 100%;
     height: 1000px;
     background-color: black;
+    /* background: linear-gradient( rgba(3, 255, 242, 0.1) , black ) ; */
 }
 
 section.About div.content span.heading {
@@ -226,12 +230,102 @@ section.skills {
 
     width: 100%;
     height: 1000px;
-    background-color: rgb(0, 85, 85);
+    /* background: linear-gradient( 155deg , black , black , rgba(1, 174, 128, 0.732)); */
+    background: linear-gradient( 145deg , black 45%,  rgba(3, 167, 159, 0.488) ) , 
+                linear-gradient( 145deg ,black 80% , rgba(2, 161, 119, 0.467)) ;
+                
+}
 
+section.skills p.heading {
+    position: relative;
+    font-size: 6em;
+    top: 150px;
+    margin: 0px 300px;
+    font-family: sans-serif  ;
 }
 
 
 /* Skills Section styling over */
+
+
+
+
+/* Resume section styling starts */
+
+section.resume {
+    width: 100%;
+    height: 1000px;
+    background: linear-gradient( 163deg , rgba(63, 171, 253, 0.3) , black, black, black ,  rgba(63, 171, 253, 0.372) );
+}
+section.resume p.heading {
+    position: relative;
+    font-size: 6em;
+    top: 350px;
+    margin: 0px 300px;
+    font-family: sans-serif  ;
+}
+section.resume iframe {
+    position: relative;
+    left: 42.25%; 
+    width: 600px;
+    height: 750px;
+    
+}
+/* section.resume img {
+    position: relative;
+    left: 43.5%; 
+    width: 550px;
+    height: 750px;
+
+} */
+section.resume button#download {
+    position: relative;
+    top: -32.5%;
+    left: 20%;
+    padding: 23px 25px;
+    border: 5px solid  rgb(63, 170, 253);
+    /* background-color: rgb(122, 198, 8);     */
+    background-color: rgb(255, 255, 255);
+    transition: all 0.5s;   
+}
+
+section.resume button#download a {
+    position: relative;
+    z-index: 1;
+    font-size: 1.5em;
+    letter-spacing: 0.05em;
+    transition: all 0.5s;
+    text-decoration: none;
+    color: white;
+}
+section.resume button#download:hover {
+    cursor: pointer;
+    left: 19%;
+    border: solid rgb(0, 141, 248);
+    /* background-color: rgb(0, 141, 248); */
+    box-shadow: 0 0 30px 5px rgb(1, 116, 204);
+}
+section.resume button#download:hover a {
+    letter-spacing: 0.15em;
+    color: rgb(87, 182, 255);
+}
+section.resume button#download::before {
+    content: "";
+    position: absolute;
+    top: 160%;
+    left: -43px;
+    width: 130%;
+    height: 40%;
+    background-color: rgb(0, 141, 248);
+    transform: perspective(15em) rotateX(60deg);
+    filter: blur(40px);
+}
+
+
+
+
+/* Resume section styling over */
+
 
 
 
