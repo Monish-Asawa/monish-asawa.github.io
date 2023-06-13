@@ -1,6 +1,6 @@
 body {
     background-color: black;
-
+    margin: 0%;
 }
 
 
@@ -11,7 +11,7 @@ section.Home {
     /* background: linear-gradient( 135deg ,  rgb(0, 0, 255 , 0.1), rgba(255, 59, 163, 0.201)  ); */
     background-image: linear-gradient(135deg , rgba(34, 3, 124, 0.2)    , rgba(3, 255, 242, 0.1) ) ;
     width: 100% ;
-    height: 1000px;    
+    height: 1000px; 
 }
 div.text {
     /* display: none; */
@@ -76,7 +76,7 @@ section.Home:hover div.circle-image {
     width: 515px;
     height: 515px;
     background-image: linear-gradient(rgba(5, 198, 201, 0.2) , rgba(83, 4, 194, 0.2) ),url("animated.jpeg");
-    box-shadow: 0 0 70px 63px   rgba(23, 99, 161, 0.843);
+    /* box-shadow: 0 0 70px 63px   rgba(23, 99, 161, 0.843); */
     box-shadow: 0 0 100px 50px   rgba(23, 99, 161, 0.843);
 
 }
@@ -264,6 +264,14 @@ section.resume p.heading {
     margin: 0px 300px;
     font-family: sans-serif  ;
 }
+section.resume div.iframe {
+    position: relative;
+    top: -65px;
+    left: 42.25%; 
+    width: 700px;
+    height: 850px;
+    
+}
 section.resume iframe {
     position: relative;
     left: 42.25%; 
@@ -280,8 +288,8 @@ section.resume iframe {
 } */
 section.resume button#download {
     position: relative;
-    top: -32.5%;
-    left: 20%;
+    top: 39.5%;
+    left: 21.5%;
     padding: 23px 25px;
     border: 5px solid  rgb(63, 170, 253);
     /* background-color: rgb(122, 198, 8);     */
@@ -300,7 +308,7 @@ section.resume button#download a {
 }
 section.resume button#download:hover {
     cursor: pointer;
-    left: 19%;
+    left: 20.80%;
     border: solid rgb(0, 141, 248);
     /* background-color: rgb(0, 141, 248); */
     box-shadow: 0 0 30px 5px rgb(1, 116, 204);
@@ -347,10 +355,18 @@ nav.content div.content svg {
     height: 45px;
 }
 nav.content div.content a {
-    /* margin: 0%; */
-    padding: 50px 0px 0 23px ;
+    position: relative;
+    top: 20px;
+    margin: 25px 5px 25px 20px ;
+    height: 50px;
+    /* padding: 50px 0px 0 23px ; */
     width: 100%;
     float: left; 
+}
+nav.content div.content a svg:hover {
+    width: 50px;
+    height: 50px;
+    margin:-1px 0px 0px -3px ;
 }
 
 /* Contact section styling over */
@@ -360,90 +376,163 @@ nav.content div.content a {
 
 /* media queries */
 
-@media all and ( max-width: 1720px) {
-    section.Home div.text{
-        top: 0px;
-        left: 0;
-        /* align-items: center; */
-        position:static;
-        /* margin: 0 auto; */
+@media screen and ( max-width: 1720px) {
+
+    /* Nav horizontal */
+    nav {
+        height: 50px;
     }
-    section.Home div.circle-image {
-        margin: 125px auto ;
-    }
-    section.Home {
-        height: 1050px;
-    }
-    section.Home span.work::before {
-        /* display: none; */
-        
-        content: "";
-        position: absolute;
-        height: 2.2%;
-        width: 7%;
-        padding: 10px ;
-        background: linear-gradient(to right , cyan , purple , pink , yellow);
-        z-index: -1;
-        filter: blur(10px);
-        
-    }
-    section.Home span.free::before {
-        /* display: none; */
-        
-        content: "";
-        position: absolute;
-        height: 2.2%;
-        width: 5%;
-        padding: 10px ;
-        background: linear-gradient(to right , cyan , purple , pink , yellow);
-        z-index: -1;
-        filter: blur(10px);
-        
-    }
-    section.About {
-        height: 2000px;
-    }
-    section.About div.content div.heading {
-        text-align: center;
-    }
-   
-    section.About div.content span.heading {
-        left: 0;
-        right: 0;
-        font-size: 4em;
-    }
-    section.About div.myimage{
-        right: 0 ;
-        left: 0;
-        margin: 0px auto;
-        float: none ;
-    }
-    section.About div.content p {
-        font-size: 1.2em ;
-        border: 6px solid coral;
-        padding: 10px;
-        max-width: 1720px;
-        margin: 0 70px;
-        left: 0;
-        background-color: rgb(21, 20, 20);
-        word-spacing: -1.5px;
-    }
-    nav div.list {
-        float: none;
-        margin-top: 15px;
-    
+    nav div.list ul  {
+        margin: 7px 55px 0 0 ;
     }
     nav div.list ul li {
-        display: inline-block;
-        float: none;
+        margin: 0 8px 0 10px  ;
     }
-    nav div.list ul{
-        text-align: center;
-        margin: 0;
-    }   
+
+    nav div.list ul li a {
+        font-size: 1rem;
+    }
+    
+    /* Nav Horizontal overs  */
+
+
+
+    /* Nav vertical */
+
+    nav.content {
+        top: 93.5%;
+        /* background-color: aqua; */
+        width: 100%;
+        height: 56px;
+    }
+    nav.content div.content {
+        display: flex;
+        margin: 0px 70px 0 125px;
+    }
+    nav.content div.content a svg {
+        width: 35px ;
+        height: 35px ;
+    }
+    nav.content div.content a {
+        margin: 0 0 10px 0px ;
+    }
+    nav.content div.content a svg:hover {
+        width: 41px;
+        height: 41px;
+        margin-top: -2px;
+    }
+    /* Nav vertical overs */
+
+
+
+
+    /* Home section */
+    section.Home {
+        height: 900px;
+    }
+    section.Home div.circle-image {
+        width: 300px;
+        height: 300px;
+        margin: 100px auto;
+        
+    }
+    section.Home:hover div.circle-image {
+        width: 315px;
+        height: 315px;
+        margin: 95px auto;
+        box-shadow: 0 0 70px 25px   rgba(23, 99, 161, 0.843);
+    }
+    section.Home div.text {
+        position: relative;
+        top: 0%;
+        left: 0;
+    }
+    section.Home div.text span#monish {
+        font-size: 2.5rem;
+    }
+    section.Home div.text span#monish1 {
+        font-size: 1.2rem;
+    }
+    section.Home div.text span.work {
+        border: 3px solid rgb(142, 67, 255);
+    } 
+    section.Home div.text span.work::before{
+        width: 23%;
+        height: 5%;
+    } 
+    section.Home div.text span.free::before{
+        width: 12%;
+    }
+
+    /* Home section overs */
+
+
+
+
+    /* About section */
+    section.About {
+        height: 1200px;
+    }
+    section.About div.content span.heading {
+        font-size: 3.5rem;
+        top: 90px;
+        left: 127px;
+    }
+    section.About div.myimage {
+        float: none;
+        width: 300px;
+        height: 400px;
+        /* right: 19%; */
+        margin: 0 130px;
+        top: 124px;
+        background-position: -160px;
+    }
+    section.About div.aboutpara p {
+        background: none;
+        font-size: 1rem;
+        left: 0%;
+        margin-right: 60px;
+        margin-left: 60px;
+        border: 3px solid cyan;
+        padding: 5px;
+        height: 475px;
+        /* max-width: 300px;          */
+    }
+    /* About section overs */
+
+
+
+    /* Skills section */
+
+    section.skills p.heading {
+        font-size: 4rem;
+        margin: 0 50px;
+    }
+
+    /* Skills section overs */
+
     
 
+    /* Resume Section */
+    section.resume {
+        height: 940px;
+    }
+    section.resume iframe {
+        display: none;
+      
+    }
+    section.resume p.heading {
+        top:350px;
+        font-size: 4rem;
+        margin: 0 0 0 15% ;
+    }
+    section.resume button#download {
+        top: 41%;
+    }
 
+    /* Resume section overs */
+    
+    
 
 } 
 
