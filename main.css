@@ -458,18 +458,27 @@ nav.content div.content a svg:hover {
 
 /* media queries */
 
-@media screen and ( max-width: 520px) {
+@media all and ( max-width: 500px) {
+
+    body {
+        overflow-x: hidden;
+    }
 
     /* Nav horizontal */
     nav {
         height: 50px;
         /* width: 500px; */
     }
+    nav div.list {
+        float: none;
+    }
     nav div.list ul  {
-        margin: 7px 55px 0 0 ;
+        /* left: -100px; */
+        margin: 7px 30px 0 0px ;
     }
     nav div.list ul li {
-        margin: 0 8px 0 10px  ;
+        margin:0;
+        padding: 12px;
     }
 
     nav div.list ul li a {
@@ -483,7 +492,7 @@ nav.content div.content a svg:hover {
     /* Nav vertical */
 
     nav.content {
-        top: 93.5%;
+        top: 93%;
         /* background-color: aqua; */
         width: 100%;
         height: 56px;
@@ -495,8 +504,10 @@ nav.content div.content a svg:hover {
         margin: 0px 70px 0 125px;
     }
     nav.content div.content a svg {
+        position: relative ;
         width: 35px ;
         height: 35px ;
+        bottom: 9px;
     }
     nav.content div.content a {
         margin: 0 0 10px 0px ;
@@ -529,7 +540,7 @@ nav.content div.content a svg:hover {
     }
     section.Home div.text {
         position: relative;
-        top: 0%;
+        top: -4%;
         left: 0;
     }
     section.Home div.text span#monish {
@@ -556,31 +567,32 @@ nav.content div.content a svg:hover {
 
     /* About section */
     section.About {
-        height: 1200px;
+        height: 1300px;
     }
     section.About div.content span.heading {
-        font-size: 3.5rem;
+        font-size: 3.2rem;
         top: 90px;
-        left: 127px;
+        left: 87px;
+
     }
     section.About div.myimage {
         float: none;
         width: 300px;
         height: 400px;
-        /* right: 19%; */
+        right: 17.25%;
         margin: 0 130px;
         top: 124px;
         background-position: -160px;
     }
     section.About div.aboutpara p {
         background: none;
-        font-size: 0.92rem;
+        font-size: 0.82rem;
         left: 0%;
         margin-right: 60px;
         margin-left: 60px;
         border: 3px solid cyan;
         padding: 5px;
-        height: 475px;
+        height: 530px;
         /* max-width: 300px;          */
     }
     /* About section overs */
@@ -589,9 +601,36 @@ nav.content div.content a svg:hover {
 
     /* Skills section */
 
+    section.skills {
+        height: 800px;
+    }
     section.skills p.heading {
         font-size: 4rem;
+        top :100px ; 
         margin: 0 50px;
+    }
+    section.skills div.names {
+        justify-content: none;
+        margin: 175px 0px 0px 0px ; 
+    }
+    section.skills div.names div.flip {
+        margin:0 -20% 0 0px ;
+    }
+    section.skills div.names div.flip div.card {
+        width: 55%;
+        height: 55%;
+    }
+    section.skills div.names div.flip div.card div.front img {
+        width: 60%; 
+        height: 60%;
+    }
+    section.skills div.names div p {
+        font-size: 0.9rem;
+        font-weight:900;
+        color: rgb(194, 193, 193);
+    }
+    section.skills div.names div.flip div.card div.back p{
+        top: 20px;
     }
 
     /* Skills section overs */
@@ -600,19 +639,31 @@ nav.content div.content a svg:hover {
 
     /* Resume Section */
     section.resume {
-        height: 940px;
+        height: 840px;
+        overflow-y:hidden ;
     }
     section.resume iframe {
         display: none;
-      
     }
     section.resume p.heading {
-        top:350px;
+        top:220px;
         font-size: 4rem;
-        margin: 0 0 0 15% ;
+        margin: 0 10% 0 16.5% ;
+        /* text-align: center; */
     }
     section.resume button#download {
-        top: 41%;
+        top: 28%;
+        left: 18%;
+    }
+    section.resume button#download:hover {
+        
+        left: 14.7%;
+        border: solid rgb(0, 141, 248);
+        /* background-color: rgb(0, 141, 248); */
+        box-shadow: 0 0 30px 5px rgb(1, 116, 204);
+    }
+    section.resume p.comment {
+        font-size: 0.9rem;
     }
 
     /* Resume section overs */
