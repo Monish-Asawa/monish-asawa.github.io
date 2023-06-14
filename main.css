@@ -1,6 +1,7 @@
 body {
     background-color: black;
     margin: 0%;
+    color: white;
 }
 
 
@@ -376,7 +377,7 @@ nav.content div.content a svg:hover {
 
 /* media queries */
 
-@media screen and ( max-width: 1720px) {
+@media screen and ( max-width: 820px) {
 
     /* Nav horizontal */
     nav {
