@@ -666,7 +666,7 @@ nav.content div.content a svg:hover {
     /* Resume Section */
     section.resume {
         height: 900px;
-        overflow-y:hidden ;
+        overflow:hidden ;
     }
     section.resume iframe {
         display: none;
