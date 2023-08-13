@@ -61,7 +61,7 @@ div.circle-image {
     width: 500px;
     height: 500px;
     background-image: linear-gradient(rgba(5, 198, 201, 0.6) , rgba(83, 4, 194, 0.7) ),
-                url("animated.jpeg");
+                url("./pics/animated.jpeg");
     /* background */
     /* opacity: 0.8; */
     background-size: cover;
@@ -78,7 +78,7 @@ section.Home:hover div.circle-image {
     /* margin-left: 20.87%; */
     width: 515px;
     height: 515px;
-    background-image: linear-gradient(rgba(5, 198, 201, 0.2) , rgba(83, 4, 194, 0.2) ),url("animated.jpeg");
+    background-image: linear-gradient(rgba(5, 198, 201, 0.2) , rgba(83, 4, 194, 0.2) ),url("./pics/animated.jpeg");
     /* box-shadow: 0 0 70px 63px   rgba(23, 99, 161, 0.843); */
     box-shadow: 0 0 100px 50px   rgba(23, 99, 161, 0.843);
 
@@ -190,7 +190,7 @@ section.About div.myimage {
     right: 8% ;
     width: 450px;
     height: 600px;
-    background: url("section.jpg");
+    background: url("./pics/section.jpg");
     background-size: cover;
     background-position: -230px;
     /* border: 10px solid rgb(255, 255, 255); */
@@ -204,7 +204,7 @@ section.About div.content div.myimage:hover {
 
 
 section.About div.content p  {
-    background: url(ok-removebg-preview.png);
+    background: url(./pics/ok-removebg-preview.png);
     /* background-size: 0%; */
     max-width: 800px;
     height: 1000px;
